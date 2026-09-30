@@ -2,7 +2,7 @@
 
 function router($requisicao)
 {
-    echo "4. Router está analisando a URL.<br>";
+    echo "Analisando a URL.<br>";
 
     $rota = "/produtos";
     $parametros = "id=123";

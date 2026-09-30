@@ -2,18 +2,18 @@
 
 function middleware($requisicao)
 {
-    echo "2. Middleware está verificando a requisição.<br>";
+    echo "Verificando a requisição.<br>";
     $permitido = true;
-
     if ($permitido) {
 
-        echo "3. Middleware permitiu continuar.<br>";
+        echo "Acesso Permitido.<br>";
 
         // Envia para o Router
         $resposta = router($requisicao);
 
         return $resposta;
+    } else {
+    return "Acesso bloqueado.";
     }
 
-    return "Acesso bloqueado.";
 }

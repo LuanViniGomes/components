@@ -2,9 +2,9 @@
 
 function dispatcher($rota, $parametros)
 {
-    echo "5. Dispatcher decidiu qual controller deve executar.<br>";
+    echo "Decidindo qual controller deve ser executado.<br>";
 
-    if ($rota == "/produtos") {
+    if ($rota === "/produtos") {
 
         // Chama o Controller de produtos
         $resposta = produtoController($parametros);
