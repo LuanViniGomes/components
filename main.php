@@ -6,3 +6,4 @@ require_once __DIR__ . '/router/router.php';
 require_once __DIR__ . '/dispatcher/dispatcher.php';
 require_once __DIR__ . '/controllers/produto_controller.php';
 require_once __DIR__ . '/services/produto_service.php';
+require_once __DIR__ . '/controllers/carros_controller.php';
