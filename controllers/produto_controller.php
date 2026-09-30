@@ -1,15 +1,22 @@
 <?php
 
-function produtoController(){
+function produtoController($parametros)
+{
+    echo "6. Controller recebeu a requisição.<br>";
 
-    echo "6. Controller recebeu a requisição <br>";
+    // Chama o Service
+    $produtos = produtoService();
 
-    $produto = produtoService(); // O Controller chama o Service para obter os produtos
-    echo "8. Controller recebeu os dados do service.<br>";
-    echo "Produtos Encontrados:<br>"; //Resposta que é mostrada
+    // Service forneceu os produtos
+    echo "7. Service forneceu os produtos.<br>";
 
-    foreach ($produto as $produto){ //Percorre todos os produtos
-        echo "- ", produto . "<br>"; //Coloca cada produto nas respostas
+    // Cria a resposta
+    $resposta = "8. Produtos encontrados:<br>";
+
+    // Mostra os produtos
+    foreach ($produtos as $produtos) {
+        $resposta .= "---> " . $produtos . "<br>";
     }
-    
+
+    return $resposta;
 }

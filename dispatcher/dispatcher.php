@@ -1,14 +1,16 @@
 <?php
 
-function dispatcher($rota)
+function dispatcher($rota, $parametros)
 {
-
     echo "5. Dispatcher decidiu qual controller deve executar.<br>";
-    if($rota === "/produto") {
-    $resposta= produtoController(); //Chama o controller responsavel pelos produtos
 
-    return $resposta; //retorna a resposta
+    if ($rota == "/produtos") {
 
+        // Chama o Controller de produtos
+        $resposta = produtoController($parametros);
+
+        return $resposta;
     }
-    return "Rota não encontrada"; //caso nao exista a rota
+
+    return "Rota não encontrada.";
 }

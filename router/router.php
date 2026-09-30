@@ -1,9 +1,14 @@
 <?php
-function router(){
-    echo "2. Router está analisando a URL.<br>";
+
+function router($requisicao)
+{
+    echo "4. Router está analisando a URL.<br>";
+
     $rota = "/produtos";
     $parametros = "id=123";
 
-    $resposta = dispatcher($rota, $parametros); //envia a rota e parametros para o dispatcher
+    // Envia para o Dispatcher
+    $resposta = dispatcher($rota, $parametros);
+
     return $resposta;
-    }
+}

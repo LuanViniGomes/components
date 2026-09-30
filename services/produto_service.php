@@ -1,13 +1,13 @@
 <?php
 
 function produtoService(){
-    echo "7. Service está executando uma regra de negócio.<br>";
 
-    return[
-
+    $produtos = [
         "Notebook",
         "Mouse",
         "Teclado",
+        "Monitor"
     ];
+
     return $produtos;
 }
