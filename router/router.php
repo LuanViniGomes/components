@@ -1,7 +1,9 @@
 <?php
 function router(){
     echo "2. Router está analisando a URL.<br>";
-    $rota = "/usuarios";
+    $rota = "/produtos";
     $parametros = "id=123";
-    middleware($rota);
-}
+
+    $resposta = dispatcher($rota, $parametros); //envia a rota e parametros para o dispatcher
+    return $resposta;
+    }
